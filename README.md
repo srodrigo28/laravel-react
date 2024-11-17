@@ -16,4 +16,51 @@ https://www.youtube.com/watch?v=vQms4DJHm-M
 * npm run dev
 * php artisan serve
 
+#### php Migrate
+
 * php artisan make:seeder UserSeeder
+
+* editar os arquivos 
+    * User/Model <b>nada a fazer </b>
+    * UserSeeder.php <b> editar </b>
+    ```
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        User::firstOrCreate(
+            [ 'email' => 'admin@gmail.com' ],
+            [ 'name' => 'Sebastião', 'email' => 'admin@gmail.com',
+            'password' => '1234admin']
+        );
+        User::firstOrCreate(
+            [ 'email' => 'admin1@gmail.com' ],
+            [ 'name' => 'Edson', 'email' => 'admin1@gmail.com',
+            'password' => '1234admin']
+        );
+    }
+    ```
+
+    * DatabaseSeeder.php <b> editar </b>
+    ```
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        $this->call([
+            UserSeeder::class,
+        ]);
+    }
+    ```
+
+* veryfy -> php artisan make:migration create_users_table;
+* success -> php artisan migrate;
+
+* php artisan db:seed
+
+#### User defalt
+
+admin@gmail.com
+1234admin
