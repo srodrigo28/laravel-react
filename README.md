@@ -41,9 +41,10 @@ https://www.youtube.com/watch?v=vQms4DJHm-M
         );
     }
     ```
-
+    
     * DatabaseSeeder.php <b> editar </b>
     ```
+    use App\Models\User;
     /**
      * Seed the application's database.
      */
