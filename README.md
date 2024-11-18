@@ -1,9 +1,16 @@
+#### sql script
+DROP DATABASE laravel;
+
+CREATE DATABASE laravel;
+
 #### Criando o projeto
 * link
 ```
 https://www.youtube.com/watch?v=vQms4DJHm-M
 ```
+* verificar se tem o composer instalado no computador
 * composer create-project laravel/laravel
+* cd laravel
 * composer require laravel/breeze --dev
 * php artisan breeze:install
     * Selecionar React com Breeze, digitar "react"
@@ -24,6 +31,7 @@ https://www.youtube.com/watch?v=vQms4DJHm-M
     * User/Model <b>nada a fazer </b>
     * UserSeeder.php <b> editar </b>
     ```
+    use App\Models\User;
     /**
      * Run the database seeds.
      */
@@ -44,7 +52,6 @@ https://www.youtube.com/watch?v=vQms4DJHm-M
     
     * DatabaseSeeder.php <b> editar </b>
     ```
-    use App\Models\User;
     /**
      * Seed the application's database.
      */
@@ -55,9 +62,7 @@ https://www.youtube.com/watch?v=vQms4DJHm-M
         ]);
     }
     ```
-
-* veryfy -> php artisan make:migration create_users_table;
-* success -> php artisan migrate;
+* success -> php artisan migrate
 
 * php artisan db:seed
 
