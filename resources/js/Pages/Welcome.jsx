@@ -24,8 +24,6 @@ export default function Welcome( { auth } ){
                 </Link>
                 </div>
             </div>
-
-
         </>
     )
 }

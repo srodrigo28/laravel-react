@@ -67,6 +67,6 @@ https://www.youtube.com/watch?v=vQms4DJHm-M
 * php artisan db:seed
 
 #### User defalt
-
+APP_TIMEZONE=America/Sao_Paulo
 admin@gmail.com
 1234admin
