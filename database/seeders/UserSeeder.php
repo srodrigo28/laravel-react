@@ -13,15 +13,17 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-       User::firstOrCreate(
-            [ 'email' => 'admin@gmail.com' ],
-            [ 'name' => 'Sebastião', 'email' => 'admin@gmail.com',
-            'password' => '1234admin']
-       );
-       User::firstOrCreate(
-        [ 'email' => 'admin1@gmail.com' ],
-        [ 'name' => 'Edson', 'email' => 'admin1@gmail.com',
-        'password' => '1234admin']
-   );
+        {
+            User::firstOrCreate(
+                [ 'email' => 'admin@gmail.com' ],
+                [ 'name' => 'Sebastião', 'email' => 'admin@gmail.com',
+                'password' => '1234admin']
+            );
+            User::firstOrCreate(
+                [ 'email' => 'admin1@gmail.com' ],
+                [ 'name' => 'Edson', 'email' => 'admin1@gmail.com',
+                'password' => '1234admin']
+            );
+        }
     }
 }
